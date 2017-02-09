@@ -17,7 +17,6 @@ export default {
   },
 
   mounted() {
-    this.$http.get('/index.html').then( ({data}) => console.log(data) )
   }
 }
 </script>

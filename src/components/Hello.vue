@@ -5,10 +5,15 @@
 </template>
 
 <script lang="ts">
+import * as Vue from 'vue'
+import { Component, prop } from 'vue-property-decorator'
+
 @Component
 export default class Hello extends Vue {
+  count: number = 0
   @prop(String) name: string
-  @state('count') count: number
-  @mutation('increment') increment: Function
+  increment() {
+    this.count ++
+  }
 }
 </script>
